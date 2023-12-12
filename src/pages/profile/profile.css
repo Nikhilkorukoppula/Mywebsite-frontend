@@ -1,0 +1,230 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    /* background-image: url(computer.jpg); */
+    
+   }
+   .App-header {
+    height:500px;
+    /* background-image: url(computer.jpg); */
+    flex-direction: column;
+  }
+  .div1{
+    display: flex;
+    width: 100%;
+    background-color: lightgrey;
+    height: 40px;
+  
+  }
+  .div{
+    display: flex;
+    width: 500px;
+    background-color: white;
+    height: 310px;
+   padding: 10px;
+   margin-top: 70px;
+  }
+  .div4{
+    display: flex;
+    flex: 1 1 10%;
+    background-color: white;
+    height: 300px;
+    border-style: ridge;
+    border-bottom-style: ridge;
+  }
+  
+  .dive{
+    display: flex;
+    flex: 1 1 30%; 
+    height: 300px;
+    background-color: white;
+    border-right-style: ridge;
+    border-bottom-style: ridge;
+  }
+
+ 
+  
+  .editIcon{
+    padding: 150px;
+    position: bottom;
+    top: 1px;
+  }
+  .div2{
+    display: flex;
+    position: relative;
+    width: 300px;
+    background-color: lightgrey;
+    height: 300px;
+    margin-top: 50px;
+   padding: 10px;
+  }
+  .desc{
+    margin-top: 50px;
+    width: 300px;
+    background-color: lightgrey;
+    height: 20px;
+    text-align: right;
+  }
+  .box1{
+  
+      display: grid;
+      grid-template-rows: 2fr 2fr;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 100px;
+      width: 100%;
+    
+  }
+  .div-cont1{
+    display: flex;
+    height: 100;
+    top: 0;
+    z-index: 1; 
+    background-color: white;
+    flex-wrap: wrap;
+  }
+  
+  
+  .div-cont2{
+    display: flex;
+    margin-bottom: 30px;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 40px;
+    background-color:transparent;
+    
+  }
+  .div-cont{
+    display: flex;
+    top: 0;
+    z-index: 2;
+    position: relative;
+  }
+  .fixed{
+    position: fixed;
+    z-index: 999;
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    align-self: center;
+  }
+  .Avatar{
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+
+  }
+  
+  .avatar-div{
+    width: 100px;
+  margin-left: 300px;
+  margin-top: -70px;
+  }
+  .avatar-name {
+    display: flex;
+    justify-content: center;
+   width: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+   
+  }
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: '60px';
+    background-color: lightgrey;
+    top: 0;
+    z-index: 1;
+  }
+  .avatar-disabled {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .my-button {
+    position: absolute;
+    left: 80%;
+   top:5%
+  }
+  .button2 {
+    position: absolute;
+    top:5%;
+    left: 85%;
+   
+  
+  } 
+  .button3 {
+   height: 2px
+  } 
+  
+  .my_file{
+    position: relative;
+    bottom: 0;
+    outline: none;
+    color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.5s;
+    background: rgba(0,0,0,0 .5);
+    opacity: 0;
+  
+  }
+  .my_file::-webkit-file-upload-button{
+    visibility: hidden;
+  }
+  .my_file::before{
+    visibility: hidden;
+    content:'\f030';
+    font-family:fontAwesome;
+    font-size: 35px;
+  float: right;
+  margin-right: 16px;
+    color: #3284fe;
+    display: inline-flex;
+    /* -webkit-user-select:none; */
+  }
+  .my_file::after{
+    visibility: hidden;
+    content:'icon';
+    background-color: white;
+    font-family: 'arial';
+    font-weight: bold;
+    color: green;
+    display: flex;
+    font-size: 12px;
+    position: relative;
+    float: left;
+  
+  }
+  .my_file:hover{
+    opacity: 1;
+  }
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

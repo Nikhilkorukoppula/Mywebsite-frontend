@@ -1,0 +1,31 @@
+.homepage{
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    background-image: url('computer.jpg');
+    
+}
+
+.main-div{
+    width: 400px;
+    height: 500px;
+    z-index: 1;
+    background-color: aliceblue;
+
+ 
+}
+.inside-div{
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+}
+
+.profile{
+    align-items: center;
+    margin-left: 500px;
+    width: 100px;
+    justify-content: center;
+    justify-items: center;
+}
