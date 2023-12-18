@@ -3,7 +3,7 @@
     height: 100vh;
     position: relative;
     align-items: center;
-    background-image: url('computer.jpg');
+    background-image: url('/src/computer.jpg');
     
 }
 

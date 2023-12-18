@@ -1,5 +1,5 @@
 
-import { Avatar, Box,Grid, Button, TextField,Fade,Typography,Modal, Container, ListItemText, ListItem, List} from '@mui/material'; 
+import { Avatar, Box,Grid, Button, TextField,Fade,Typography,Modal, Container, ListItemText, ListItem, List, Divider} from '@mui/material'; 
 import './profile.css';  
 import * as React from 'react';
 import { useState, useEffect , useRef} from 'react';
@@ -289,7 +289,7 @@ useEffect(()=>{
       <header className="App-header" ref={home}>
       <div style={{position:'fixed'}}>
             <img 
-            src={require('./computer.jpg')} alt='deleted'> 
+            src={require('/Users/Sreenivas Bandaru/Documents/nikhil/Micro-Services/React/myprofile/src/computer.jpg')} alt='deleted'> 
            
         </img>   
         </div>    
@@ -549,44 +549,52 @@ useEffect(()=>{
      </Grid>
      </Grid>
 
-     <Box item xs={12} sm={3.5} ref={contact} style={{ 
-      display:'flex',
-      backgroundColor:'white',
-      width:'100%',
-      height:'500px'}}>
-        <Grid sx={{marginLeft:'100px',color:'#d13459'}}>
-          <span><h3 >Contact Details</h3></span>
-        </Grid>
-       <br/>
-         <form >
-           <Grid sx={{display:'flex',justifyContent:'center',justifyItems:'center',
-           height:'250px',
-           width:'100%',
-           marginTop:'50px',
-           backgroundColor:'white',
-           }}>
-          <Grid sx={{display:'flex',flexDirection:'column'}}>
-          <TextField sx={{width:'500px',marginTop:'20px'}} label='Name'></TextField>
-          <TextField sx={{width:'500px',marginTop:'20px'}} label='EmailID'></TextField>
-          <TextField sx={{width:'500px',marginTop:'20px'}} label='Conatact No' type='number'></TextField>
-          
-          </Grid>
-        <Grid>
-        <TextField id="outlined-multiline-static"
-          label="Comments"
-          multiline
-          rows={7.5} sx={{width:'500px',marginTop:'20px',marginLeft:'30px'}} ></TextField>
-          
-        </Grid>
-        </Grid>
-        <Button variant="contained" enableElevation>
-                Submit
-           </Button>
-         </form>
-         
-     </Box>
-     </Box>
+     <Grid
+      container
+      spacing={0}
+      ref={contact}
+      style={{
+        backgroundColor: 'white',
+        width: '100%',
+        justifyContent: 'flex-start', 
+        alignItems: 'start', 
+        
+      }}
+    >
+      <Grid item xs={12} sm={3.5} sx={{ marginLeft: '10px', color: '#d13459' }}>
+        <span>
+          <h3>Contact Details</h3>
+        </span>
+      </Grid>
 
+      <Grid container spacing={2} sx={{  display: 'flex', justifyContent: 'center' }}>
+        
+        <Grid item xs={10} sm={6} md={4} lg={4} sx={{ display: 'flex', flexDirection: 'column' }}>
+          <TextField fullWidth label="Name"  sx={{marginBottom:'10px'}}/>
+          <TextField fullWidth label="EmailID" sx={{marginBottom:'10px'}} />
+          <TextField fullWidth label="Contact No" type="number" sx={{marginBottom:'10px'}} />
+         
+        </Grid>
+
+       
+        <Grid item xs={10} sm={6} md={8} lg={4}>
+          <TextField
+            id="outlined-multiline-static"
+            label="Comments"
+            multiline
+            rows={6.8}
+            sx={{  width: '100%' }}
+          />
+          <Button variant="contained"  sx={{ marginTop: '20px',marginBottom:'10px', display:'flex',justifyContent:'flex-start',alignContent:'flex-start' }}>
+            Submit
+          </Button>
+        </Grid>
+       
+      </Grid>
+     
+    </Grid>
+     </Box>
+    
     
 
 

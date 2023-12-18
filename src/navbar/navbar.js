@@ -253,7 +253,7 @@ setDropProfile(!dropProfile)
             Menu
           </Typography>
          
-          <Box sx={{ display: { xs: 'none', sm: 'block' }}}>
+          <Box sx={{ display: { xs: 'none', sm: 'block'}}}>
             {navItems.map((item) => (
              <Button key={item} sx={{ color: '#fff' }} onClick={() => handleLinkClick(item)}>
              {item}

@@ -60,7 +60,7 @@ return (
                                     justifyitems:'center',
                                     display:'flex' }}  item xs={12}>
 
-                            A Greate Profile Perfectly Defines What You Are.!
+                            A Great Profile Perfectly Defines What You Are.!
                              
                         </h1>
 

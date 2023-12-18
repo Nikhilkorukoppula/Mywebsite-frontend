@@ -53,19 +53,33 @@ function CreateProfile(){
 
     }
 
-
+    
     return (
-    isLoading?<Loading/>:<Grid style={{width:'100',backgroundColor:'whitesmoke',height:'100vh',
+      <>
+      <img style={{position:'fixed'}}
+            src={require('/Users/Sreenivas Bandaru/Documents/nikhil/Micro-Services/React/myprofile/src/computer.jpg')} alt='deleted'> 
+           
+        </img> 
+    <Grid style={{width:'100',height:'100vh',
                  justifyContent:'center',
                  justifyItems:'center',
+                 position:'relative',
+                 zIndex:2,
                  display:'flex'}} xs item={12}> 
-                
-              <Button style={{backgroundColor:'dodgerblue',color:'white',height:'30px',marginTop:'50px',marginLeft:'400px'}} onClick={handleGoBack}>Back</Button>
-            
-              <Grid style={{justifyContent:'center', justifyItems:'center',position:'absolute',
-                             alignItems:'center',marginTop:'100px',height:'500px',width:'500px',textAlign:'center'}}
+             
+
+              
+              <Grid style={{justifyContent:'center',
+                            justifyItems:'center',
+                            position:'absolute',
+                             alignItems:'center',
+                             marginTop:'60px',height:'500px',width:'400px',
+                             textAlign:'center',
+                             backgroundColor:'aliceblue',}}
                             sx={{boxShadow:'10',borderRadius:'10px'}}>
               <h2>Profile Details</h2>
+              
+            
               <TextField  value={name} onChange={(e)=>{setName(e.target.value)}} label="FullName" variant="standard" type="text" /><br/>
               <TextField  value={gender} onChange={(e)=>{setGender(e.target.value)}} label="gender" variant="standard" type="text" /><br/>
               <TextField  value={email} onChange={(e)=>{setEmail(e.target.value)}} label="Email" variant="standard" type="email" /><br/><br/>
@@ -73,10 +87,13 @@ function CreateProfile(){
               <TextField  value={contactNo} onChange={(e)=>{setContactNo(e.target.value)}} label="ContactNo" variant="standard" type="number" /><br/>
               <TextField  value={address} onChange={(e)=>{setAddress(e.target.value)}} rows={'5'} label="Address" variant="standard" type="text"/><br/>
               <TextField  value={password} onChange={(e)=>{setPassword(e.target.value)}}label="Password" variant="standard" type="password"/><br/><br/>
-              <Button style={{backgroundColor:'dodgerblue',color:'white'}} onClick={handleSubmit}>Submit</Button>
+              <Button variant="contained" style={{backgroundColor:'dodgerblue',
+                             color:'white',marginLeft:'20px'}} onClick={handleGoBack}>Back</Button>
+              <Button variant="contained" style={{backgroundColor:'dodgerblue',color:'white',marginLeft:'50px'}} onClick={handleSubmit}>Submit</Button>
               </Grid>
              
     </Grid>
+    </>
     );
 
 };

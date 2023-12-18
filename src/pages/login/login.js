@@ -3,16 +3,12 @@ import './login.css';
 import { Box, Grid, Button, TextField, useMediaQuery, Typography } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Swal from 'sweetalert2';
-import { toast } from 'react-toastify';
 import Loading from '../Loading Component/loading';
-import Switch from '@mui/material/Switch';
 import ColorSwitches from '../Loading Component/switch';
-import { Source } from '@mui/icons-material';
-import { baseUrl, myAxios } from '../../Server/MyAxios';
+import { baseUrl } from '../../Server/MyAxios';
 
 function Login() {
   const [isRotated, setIsRotated] = useState(false);
@@ -111,16 +107,23 @@ function Login() {
   };
 
   return (
-    <Box className="homepage" sx={{ justifyContent: 'center', display: 'flex' }} item="true" xs={12}>
+    <Box className="homepage" sx={{ justifyContent: 'center', display: 'flex', }} item="true" xs={12}>
       {isLoading ? (
         <Loading />
       ) : (
-        <Box className="main-div" sx={{ justifyContent: 'center', boxShadow: 20, borderRadius: '10px', display: 'flex' }}>
+        <Box   sx={{justifyContent: 'center',
+                                     boxShadow: 20,
+                                     borderRadius: '10px',
+                                     display: 'flex',
+                                     width:'400px',
+                                     height:'500px',
+                                     backgroundColor:'aliceblue',
+                                      }}>
        
-          <Grid container spacing={isMobile ? 2 : 4} item xs={12}  md={isMobile ? 12 : 6} style={{justifyContent:'center'}}>
+          <Grid container spacing={isMobile ? 2 : 4} item xs={12}  md={isMobile ? 12 : 6} style={{justifyContent:'center',display:'flex'}}>
          
            
-            <Box sx={{ justifyItems: 'center', display: 'fixed',height:'30px',marginTop:'90px',}}> 
+            <Box sx={{ justifyItems: 'center', display: 'flex',height:'30px',marginTop:'90px',}}> 
             <Typography style={{fontFamily:'Segoe Script', fontSize:'30px'}}>Login</Typography> 
            
             </Box> 
@@ -133,7 +136,7 @@ function Login() {
                     </Grid>
 
                 <Grid style={{justifyContent:'flex-end',display:'flex',width:'280px'}}>
-                    <Typography onClick={() => navigate('/login/forgot-password')} style={{ color: '#263238', cursor: 'pointer',display:'flex', fontFamily:'Times New Roman', fontSize:'17px' }}>
+                    <Typography onClick={() => navigate('/forgot-password')} style={{ color: '#263238', cursor: 'pointer',display:'flex', fontFamily:'Times New Roman', fontSize:'17px' }}>
                       Forgot Password
                     </Typography>  
                     </Grid>
