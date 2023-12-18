@@ -74,7 +74,7 @@ function DrawerAppBar(props) {
               timer: 1500
             })
            
-          navigate('/login');
+          navigate('/');
           } 
         })
        
