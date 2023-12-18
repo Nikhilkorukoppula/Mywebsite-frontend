@@ -57,7 +57,7 @@ function CreateProfile(){
     return (
       <>
       <img style={{position:'fixed'}}
-            src={require(''../../computer.jpg'')} alt='deleted'> 
+            src={require('../../computer.jpg')} alt='deleted'> 
            
         </img> 
     <Grid style={{width:'100',height:'100vh',
