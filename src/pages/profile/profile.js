@@ -289,7 +289,7 @@ useEffect(()=>{
       <header className="App-header" ref={home}>
       <div style={{position:'fixed'}}>
             <img 
-            src={require('/Users/Sreenivas Bandaru/Documents/nikhil/Micro-Services/React/myprofile/src/computer.jpg')} alt='deleted'> 
+            src={require('../../computer.jpg')} alt='deleted'> 
            
         </img>   
         </div>    
