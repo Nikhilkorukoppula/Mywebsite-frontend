@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const baseUrl="http://10.0.0.14:8087/api/V1/myprofile"
+export const baseUrl="https://mywebsite-94hc.onrender.com/api/V1/myprofile"
 
 export const myAxios = axios.create({
     baseURL: `${baseUrl}`
